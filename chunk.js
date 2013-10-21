@@ -5,10 +5,7 @@ var chunk = function (arr, n){
     var b = arr.length/n;
     var c = Math.floor(b);
     var d = Math.ceil(b);
-    var len = c;
-    if(c === 1){
-        len = n;
-    }
+    var len = n;
     var count = 0;
     for(var i = 0; i < len; i++){
         var start = 0 + count;
@@ -26,5 +23,5 @@ var chunk = function (arr, n){
             newArray[i].push(arr[j]);
         }
     }
-    console.log(newArray);
+    return newArray;
 };
